@@ -1,0 +1,28 @@
+#pragma once
+
+#pragma warning(push)
+#include "fmt/format.h"
+#include "F4SE/F4SE.h"
+#include "RE/Fallout.h"
+
+#ifdef NDEBUG
+#	include <spdlog/sinks/basic_file_sink.h>
+#else
+#	include <spdlog/sinks/msvc_sink.h>
+#endif
+#pragma warning(pop)
+
+#define DLLEXPORT __declspec(dllexport)
+
+namespace logger = F4SE::log;
+
+using namespace std::literals;
+
+#include "Version.h"
+#include "RE/Bethesda/FormUtil.h"
+
+#include <ppl.h>
+#include <concurrent_unordered_map.h>
+#include <concurrent_unordered_set.h>
+
+namespace ppl = concurrency;
