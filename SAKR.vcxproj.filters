@@ -279,6 +279,9 @@
     <ClCompile Include="SAKR\Sources\ActorsManager\ActorsEquipQueue\ActorsEquipQueue.cpp">
       <Filter>SAKR\ActorsManager\ActorsEquipQueue</Filter>
     </ClCompile>
+    <ClCompile Include="SAKR\Sources\Papyrus\PapyrusFunctions.cpp">
+      <Filter>SAKR\Papyrus</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\CommonLibF4\CommonLibF4\include\F4SE\API.h">
@@ -877,6 +880,15 @@
     </ClInclude>
     <ClInclude Include="SAKR\Sources\ActorsManager\ActorsEquipQueue\ActorsEquipQueue.h">
       <Filter>SAKR\ActorsManager\ActorsEquipQueue</Filter>
+    </ClInclude>
+    <ClInclude Include="SAKR\Sources\Papyrus\PapyrusFunctions.h">
+      <Filter>SAKR\Papyrus</Filter>
+    </ClInclude>
+    <ClInclude Include="SAKR\Sources\Utils\PapyrusEvents.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SAKR\Sources\Papyrus\PapyrusEvents.h">
+      <Filter>SAKR\Papyrus</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

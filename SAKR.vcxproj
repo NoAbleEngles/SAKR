@@ -198,6 +198,7 @@
     <ClCompile Include="SAKR\Sources\detourxs\detourxs.cpp" />
     <ClCompile Include="SAKR\Sources\ExposureCalculator\ExposureCalculator.cpp" />
     <ClCompile Include="SAKR\Sources\Hooks\Hooks.cpp" />
+    <ClCompile Include="SAKR\Sources\Papyrus\PapyrusFunctions.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\CommonLibF4\CommonLibF4\include\F4SE\API.h" />
@@ -397,6 +398,9 @@
     <ClInclude Include="SAKR\Sources\ExposureCalculator\ExposureCalculator.h" />
     <ClInclude Include="SAKR\Sources\Hooks\Hooks.h" />
     <ClInclude Include="PCH.h" />
+    <ClInclude Include="SAKR\Sources\Papyrus\PapyrusEvents.h" />
+    <ClInclude Include="SAKR\Sources\Papyrus\PapyrusFunctions.h" />
+    <ClInclude Include="SAKR\Sources\Utils\PapyrusEvents.h" />
     <ClInclude Include="SAKR\Sources\Utils\SharedSet.hpp" />
     <ClInclude Include="Version.h" />
   </ItemGroup>

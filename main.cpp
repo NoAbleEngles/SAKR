@@ -6,7 +6,7 @@
 
 static auto getIni() -> const ini::map&;
 
-static auto GetManager() -> ActorsManager& {
+auto GetManager() -> ActorsManager& {
 	static auto manager = ActorsManager("Data\\F4SE\\Plugins\\SAKR.json");
 	return manager;
 }
