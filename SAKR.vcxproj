@@ -123,7 +123,7 @@
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)SAKR\Sources\spdlog\include;$(SolutionDir)SAKR\Sources\mmio\include;$(SolutionDir)SAKR\Sources\fmt\include;$(SolutionDir)SAKR\Sources\zlib\include;$(BOOST);C:\cpp\CommonLibF4\CommonLibF4\include;$(SolutionDir)SAKR\Sources</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <UseStandardPreprocessor>true</UseStandardPreprocessor>
       <LanguageStandard>stdcpplatest</LanguageStandard>
@@ -132,7 +132,7 @@
       <UseFullPaths>false</UseFullPaths>
       <AdditionalOptions>%(AdditionalOptions) /utf-8</AdditionalOptions>
       <ForcedIncludeFiles>cstdint;cstddef;C:/cpp/CommonLibF4/build/CommonLibF4/CMakeFiles/CommonLibF4.dir/Release/cmake_pch.hxx</ForcedIncludeFiles>
-      <Optimization>Disabled</Optimization>
+      <Optimization>MaxSpeed</Optimization>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

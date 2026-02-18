@@ -3,6 +3,7 @@
 #include <filesystem>
 #include <functional>
 #include "ActorsManager/ActorsManager.h"
+#include "Papyrus/PapyrusFunctions.h"
 
 static auto getIni() -> const ini::map&;
 
@@ -33,7 +34,7 @@ extern "C" DLLEXPORT auto F4SEAPI F4SEPlugin_Query(const F4SE::QueryInterface* a
 	auto log = std::make_shared<spdlog::logger>("global log"s, std::move(sink));
 
 	log->set_level(spdlog::level::info);
-	log->flush_on(spdlog::level::info);
+	log->flush_on(spdlog::level::warn);
 
 	spdlog::set_default_logger(std::move(log));
 	//spdlog::set_pattern("%g(%#): [%^%l%$] %v"s);
@@ -63,15 +64,13 @@ extern "C" DLLEXPORT auto F4SEAPI F4SEPlugin_Load(const F4SE::LoadInterface* a_f
 {
 	F4SE::Init(a_f4se);
 
-	/*const auto serialization = F4SE::GetSerializationInterface();
-	if (!serialization) {
-		logger::critical("Failed to get F4SE serialization interface, marking as incompatible.");
-		return false;
+	const auto papyrus = F4SE::GetPapyrusInterface();
+	if (!papyrus || !papyrus->Register(Papyrus::RegisterFunctions)) {
+		logger::critical("Failed to register Papyrus functions!");
 	}
 	else {
-		serialization->SetUniqueID(Version::UID);
-		logger::critical("Registered with F4SE serialization interface.");
-	}*/
+		logger::info("Registered Papyrus functions.");
+	}
 
 	const auto messaging = F4SE::GetMessagingInterface();
 	if (!messaging || !messaging->RegisterListener(MessageHandler)) {
